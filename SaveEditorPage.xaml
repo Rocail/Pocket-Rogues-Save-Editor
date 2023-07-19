@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Save_Editor.SaveEditorPage"
+    
+    Title="Pocket Rogues SE"
+    BackgroundColor="#212837">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            IsVisible="False"
+            IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    <ScrollView Padding="20">
+        <StackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            HorizontalOptions="Fill">
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Gold"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="Gold"
+                    Placeholder="Gold"
+                    Keyboard="Numeric"
+                    TextChanged="Gold_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Gems"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="Gems"
+                    Placeholder="Gems"
+                    Keyboard="Numeric"
+                    TextChanged="Gems_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Warrior skill points"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="WarriorSkillPoints"
+                    Placeholder="WarriorSkillPoints"
+                    Keyboard="Numeric"
+                    TextChanged="WarriorSkillPoints_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Archer skill points"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="ArcherSkillPoints"
+                    Placeholder="ArcherSkillPoints"
+                    Keyboard="Numeric"
+                    TextChanged="ArcherSkillPoints_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Wizard skill points"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="WizardSkillPoints"
+                    Placeholder="WizardSkillPoints"
+                    Keyboard="Numeric"
+                    TextChanged="WizardSkillPoints_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Hunter skill points"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="HunterSkillPoints"
+                    Placeholder="HunterSkillPoints"
+                    Keyboard="Numeric"
+                    TextChanged="HunterSkillPoints_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Berserk skill points"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="BerserkSkillPoints"
+                    Placeholder="BerserkSkillPoints"
+                    Keyboard="Numeric"
+                    TextChanged="BerserkSkillPoints_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Spacing="10">
+                <Label
+                    Text="Necromancer skill points"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Gold"
+                    FontSize="18" />
+                <Entry
+                    x:Name="NecromancerSkillPoints"
+                    Placeholder="NecromancerSkillPoints"
+                    Keyboard="Numeric"
+                    TextChanged="NecromancerSkillPoints_TextChanged"
+                    BackgroundColor="#141823">
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Spacing="10"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="SaveButton"
+                    Text="Save"
+                    SemanticProperties.Hint="SaveButton"
+                    Clicked="SaveButton_Clicked" />
+                <Button
+                    x:Name="LoadButton"
+                    Text="Load"
+                    SemanticProperties.Hint="LoadButton"
+                    Clicked="LoadButton_Clicked" />
+            </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
