@@ -26,7 +26,7 @@ namespace Save_Editor
             {
                 return savingDataClass = (SaveFileModel)JsonConvert.DeserializeObject<SaveFileModel>(save);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
@@ -88,7 +88,7 @@ namespace Save_Editor
 
         public string questsDaily;
 
-        public int questDate;
+        public string questDate;
 
         public int join;
 
@@ -164,6 +164,8 @@ namespace Save_Editor
 
         public int[] towerModifiers;
 
+        public int[] petSkillsFounded;
+
         public string forgeProgress_stoneEffects;
 
         public string forgeProgress_knownRecipes;
@@ -174,10 +176,13 @@ namespace Save_Editor
 
         public int oblivionPriceMob;
 
+        [JsonProperty(PropertyName = "Characters statistics")]
         public string[] character_statistics;
 
         public string[] character_statistics_current;
 
+
+        [JsonProperty(PropertyName = "Characters progress")]
         public string[] characters_progress;
 
         public string[] characters_inventory;
@@ -189,6 +194,8 @@ namespace Save_Editor
         public string[] characters_clearedMod;
 
         public string[] characters_currentScore;
+
+        public string[] serializedVariables;
 
         public bool manualEdited;
 
@@ -206,11 +213,13 @@ namespace Save_Editor
             public int hp;
             public int dmg;
             public int spd;
+            public string curSkills;
+            public string allSkills;
         }
 
         public int GetJobSP(Job job)
         {
-            return freeSkillPoints[(int) job];
+            return freeSkillPoints[(int)job];
         }
 
         public void SetJobSP(Job job, int sp)
