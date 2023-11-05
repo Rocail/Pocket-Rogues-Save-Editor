@@ -28,4 +28,4 @@ Run the following command :
 msbuild /restore /t:Publish /p:TargetFramework=net7.0-windows10.0.19041.0 /p:configuration=release /p:PublishSingleFile=true /p:WindowsPackageType=None /p:RuntimeIdentifier=win10-x64 /p:PublishReadyToRun=false
 ```
 
-If it doesn't work because msbuild is missing, try to locate your MSBuild binaries folder (usually something like "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin") and ad it to your path, then re-open your powershell
+If it doesn't work because msbuild is missing, try to locate your MSBuild binaries folder (usually something like "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin") and add it to your path, then re-open your powershell
