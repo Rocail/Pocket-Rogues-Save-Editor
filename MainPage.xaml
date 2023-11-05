@@ -29,6 +29,15 @@
                 SemanticProperties.Hint="Load your save file"
                 Clicked="OnLoadButtonClicked"
                 HorizontalOptions="Center" />
+            
+            <Label
+                x:Name="ErrorLabel"
+                Text="Cannot load this file, maybe a game update broke the save editor."
+                SemanticProperties.Description="Error Message"
+                FontSize="14"
+                TextColor="Red"
+                HorizontalOptions="Center"
+                IsVisible="false"/>
 
         </VerticalStackLayout>
     </ScrollView>

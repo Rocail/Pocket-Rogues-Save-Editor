@@ -29,7 +29,7 @@ public partial class MainPage : ContentPage
             }
             else
             {
-                await Toast.Make("Error", CommunityToolkit.Maui.Core.ToastDuration.Short, 14).Show();
+                ErrorLabel.IsVisible = true;
             }
         }
     }

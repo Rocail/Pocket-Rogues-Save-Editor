@@ -61,10 +61,12 @@ public partial class SaveEditorPage : ContentPage, IQueryAttributable
 
                 await Task.Delay(2000);
                 LoadButton.Text = "Load";
+                ErrorLabel.IsVisible = false;
             }
             else
             {
-                await Toast.Make("Error", CommunityToolkit.Maui.Core.ToastDuration.Short, 14).Show();
+                ErrorLabel.Text = "Cannot load this file, maybe a game update broke the save editor.";
+                ErrorLabel.IsVisible = true;
             }
         }
     }
@@ -76,10 +78,12 @@ public partial class SaveEditorPage : ContentPage, IQueryAttributable
             this.save = save;
             oldSave = save.DeepCopy();
             InitFields();
+            ErrorLabel.IsVisible = false;
         }
         else
         {
-            Toast.Make("Error reloading the save, close and reopen the app if you want to edit again");
+            ErrorLabel.Text = "Error reloading the save, close and reopen the app if you want to edit again";
+            ErrorLabel.IsVisible = true;
         }
     }
 
